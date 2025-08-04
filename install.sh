@@ -56,6 +56,7 @@ sudo pacman -S --noconfirm "${PKGS[@]}"
 AUR_PKGS=(
   hyprland
   hyprpaper
+  hyprlock
   spotify
   zen-browser-bin
   obsidian
@@ -67,6 +68,8 @@ AUR_PKGS=(
   visual-studio-code-bin
   thunar-git
   insomnia
+  brightnessctl
+  wireplumber
 )
 
 yay -S --noconfirm "${AUR_PKGS[@]}"
@@ -82,17 +85,15 @@ fi
 
 echo "==> Moving config files..."
 mkdir -p ~/.config
-cp -r dotfiles/dunst ~/.config/
-cp -r dotfiles/.wallpaper ~/.config/
-cp -r dotfiles/waybar ~/.config/
-cp -r dotfiles/wofi ~/.config/
-cp -r dotfiles/hypr ~/.config/
+cp -rf ~/source/dotfile/dunst ~/.config/
+cp -rf ~/source/dotfile/.wallpaper ~/.config/
+cp -rf ~/source/dotfile/waybar ~/.config/
+cp -rf ~/source/dotfile/wofi ~/.config/
+cp -rf ~/source/dotfile/hypr ~/.config/
 
 echo "==> Moving home configuration files..."
-cp dotfiles/.vimrc ~/
-cp dotfiles/.zshrc ~/
-
-rm -rf dotfiles
+cp -f ~/source/dotfile/.vimrc ~/
+cp -f ~/source/dotfile/.zshrc ~/
 
 echo "==> Updating font cache..."
 fc-cache -fv
@@ -109,4 +110,4 @@ for i in 3 2 1; do
   sleep 1
 done
 
-sudo reboot
+# sudo reboot
