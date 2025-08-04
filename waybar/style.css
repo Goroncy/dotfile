@@ -1,0 +1,50 @@
+* {
+	font-family: montserrat,monospace;
+	color: #fff;
+}
+
+window#waybar {
+    padding: 5px;
+    background: transparent;
+    color: #fff;
+}
+
+#workspaces,
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk,
+#tray,
+#network{
+	background: #1a1a1a;
+	font-size: 14px;
+	border: 0.5px solid white;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#network{
+	font-size: 25px;
+}
+
+#workspaces button {
+	color: #fff;
+}
+#workspaces button.focused {
+	color: #ff4400;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+#workspaces button:hover {
+	background: #1a1a1a;
+	border: #1a1a1a;
+}

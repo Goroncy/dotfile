@@ -1,0 +1,70 @@
+@import '/home/me/.config/wofi/catppuccin.css';
+
+* {
+    font-family: 'CaskaydiaCove Nerd Font mono';
+    font-size: 14px;
+ }
+
+ /* Janela */
+ window {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: @bg;
+ }
+
+ /* Caixa Interna */
+ #inner-box {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: @bg;
+ }
+
+ /* Caixa Externa */
+ #outer-box {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: @bg;
+    border-radius: 5px;
+ }
+
+ /* Rolagem */
+ #scroll {
+    margin: 0px;
+    padding: 10px;
+    border: none;
+ }
+
+ /* Entrada */
+ #input {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: @accent;
+    background-color: @bg;
+    border: 2px solid @accent;
+ }
+
+ /* Texto */
+ #text {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: @txt;
+ }
+
+ /* Entrada Selecionada */
+ #entry:selected {
+   background-color: @bg;
+   outline: 1px solid @accent;
+ }
+
+ #entry:selected #text {
+    color: @txt;
+ }
+ image {
+   margin-left: 10px;
+ }
