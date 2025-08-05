@@ -70,6 +70,7 @@ AUR_PKGS=(
   insomnia
   brightnessctl
   wireplumber
+  docker
 )
 
 yay -S --noconfirm "${AUR_PKGS[@]}"
